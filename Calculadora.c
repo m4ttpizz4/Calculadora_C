@@ -1,19 +1,18 @@
 //Calculadora:
-//Imports:
+//Imports(Bibliotecas):
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #include <math.h>
-//Int main:
+//Int main e locale:
 int main(void){
-//Local:
 setlocale(LC_ALL,"Portuguese");
 //Variáveis:
-int operacao_menu, operacao_fg, somar_1, somar_2, somar_r, subtrair_1, subtrair_2, subtrair_r, multiplicar_1, multiplicar_2, multiplicar_r, dividir_1, dividir_2, dividir_r, raiz_1, raiz_r, potencia_1, potencia_2, potencia_r, bhaskara_a, bhaskara_b, bhaskara_c, bhaskara_delta, bhaskara_r1, bhaskara_r2, quadrado_1, quadrado_2, quadrado_r, triangulo_base, triangulo_altura, triangulo_r; 
-float porcen_1, porcen_2, porcen_r, circulo_1, circulo_r;
+int operacao_menu, operacao_fg, operacao_form, somar_1, somar_2, somar_r, subtrair_1, subtrair_2, subtrair_r, multiplicar_1, multiplicar_2, multiplicar_r, raiz_1, raiz_r, potencia_1, potencia_2, potencia_r, bhaskara_a, bhaskara_b, bhaskara_c, bhaskara_delta, bhaskara_r1, bhaskara_r2, quadrado_1, quadrado_2, quadrado_r, triangulo_base, triangulo_altura, triangulo_r; 
+float porcen_1, porcen_2, porcen_r, circulo_1, circulo_r, dividir_1, dividir_2, dividir_r;
 //Interação:
-printf("\n[Calculadora (Beta 2)]\n\n");
-printf("Selecione a operação teclando o número correspondente:\n\n1.Somar.\n2.Subtrair.\n3.Multiplicar.\n4.Dividir.\n5.Raiz Quadrada.\n6.Potência.\n7.Formula de Bháskara.\n8.Porcentagem.\n9.Figuras geométricas.\n\n");
+printf("\n[Calculadora (V2.5)]\n\n");
+printf("Selecione a operação teclando o número correspondente e pressionando 'Enter':\n\n1.Somar.\n2.Subtrair.\n3.Multiplicar.\n4.Dividir.\n5.Raiz Quadrada.\n6.Potência.\n7.Formula de Bháskara.\n8.Porcentagem.\n9.Figuras geométricas.\n0.Fórmulas matemáticas.\n\n");
 scanf("%i", &operacao_menu);
 printf("\n------------------------------------------------------------------------\n\n");
 	//Somar:
@@ -24,7 +23,7 @@ printf("\n----------------------------------------------------------------------
 		scanf("%i", &somar_2);
 		printf("\n------------------------------------------------------------------------\n\n");
 			somar_r = somar_1 + somar_2;	//Cálculo
-		printf("\nO resultado da soma é : %i \n", somar_r);
+		printf("\nO resultado da soma é : %i. \n", somar_r);
 	}
 	//Subtrair:
 	if(operacao_menu == 2){
@@ -49,20 +48,20 @@ printf("\n----------------------------------------------------------------------
 	//Divisão:
 	if(operacao_menu == 4){
 		printf("Para começar a divisão, digite o primeiro número e em seguida aperte 'Enter':\n\n");
-		scanf("%i", &dividir_1);
+		scanf("%f", &dividir_1);
 		printf("\nDigite o segundo número:\n\n");
-		scanf("%i", &dividir_2);
+		scanf("%f", &dividir_2);
 		printf("\n------------------------------------------------------------------------\n\n");
 			dividir_r = dividir_1 / dividir_2;	//Cálculo
-		printf("\nO resultado da divisão é : %i \n", dividir_r);
-	}
+		printf("\nO resultado da divisão é : %f. \n", dividir_r);
+		}
 	//Raiz Quadrada:
 	if(operacao_menu == 5){
 		printf("Para calcular a raiz, digite o número que desejar e aperte 'Enter':\n\n");
 		scanf("%i", &raiz_1);
 		printf("\n------------------------------------------------------------------------\n\n");
 			raiz_r = sqrt(raiz_1);	//Cálculo
-		printf("\nO resultado da raiz quadrada é : %i \n", raiz_r);
+		printf("\nO resultado da raiz quadrada é : %i. \n", raiz_r);
 	}
 	//Potência:
 	if(operacao_menu == 6){
@@ -72,7 +71,7 @@ printf("\n----------------------------------------------------------------------
 		scanf("%i", &potencia_2);
 		printf("\n------------------------------------------------------------------------\n\n");
 			potencia_r = pow(potencia_1, potencia_2);
-		printf("O resultado da potenciação é : %i \n", potencia_r);
+		printf("O resultado da potenciação é : %i. \n", potencia_r);
 	}
 	//Bháskara:
 	if(operacao_menu == 7){
@@ -86,8 +85,7 @@ printf("\n----------------------------------------------------------------------
 			bhaskara_r1 = -bhaskara_b+sqrt(bhaskara_delta)/(2*bhaskara_a);	//Cálculo de X1
 			bhaskara_r2 = -bhaskara_b-sqrt(bhaskara_delta)/(2*bhaskara_a);	//Cálculo de X2
 		printf("\n------------------------------------------------------------------------\n\n");
-		printf("\nUtilizando raiz de delta positivo em X1 e raiz de delta negativo em X2, podemos adquirir o seguinte resultado:\n\n");
-		printf("X1 = %d \nX2 = %d \n", bhaskara_r1, bhaskara_r2);
+		printf("\nUtilizando raiz de delta positivo em X1 e raiz de delta negativo em X2, podemos adquirir o seguinte resultado:\nX1 = %d. \nX2 = %d. \n\n", bhaskara_r1, bhaskara_r2);
 	}
 	//Porcentagem:
 	if(operacao_menu == 8){
@@ -97,7 +95,7 @@ printf("\n----------------------------------------------------------------------
 		scanf("%f", &porcen_2);
 			porcen_r = porcen_2*(porcen_1/100);		//Cálculo
 		printf("\n------------------------------------------------------------------------\n\n");
-		printf("\nO resultado desse cálculo é: %f \n", porcen_r);
+		printf("\nO resultado desse cálculo é: %f. \n", porcen_r);
 	}
 	//Áreas de figuras geométricas:
 	if(operacao_menu == 9){
@@ -132,7 +130,38 @@ printf("\n----------------------------------------------------------------------
 		printf("\n------------------------------------------------------------------------\n\n");
 		printf("\nO valor da área do triângulo é : %i \n", triangulo_r);
 		}
+	//Fórmulas matemáticas:
+		if(operacao_menu == 0){
+		printf("\nDigite o número correspondente a cada formula e pressione a tecla 'Enter':\n1.Fórmula de Bháskara.\n2.Relatividade.\n3.Área do quadrado/retângulo.\n4.Circunferência.\n5.Área do Triângulo.\n");
+		scanf("%i", &operacao_form);
+		}
+		//Fórmula de Bháskara:
+		if(operacao_form == 1){
+		printf("\n------------------------------------------------------------------------\n\n");
+		printf("delta = b² - 4*a*c\n\n-b +-raiz{delta}/2*a.\n");
+		}
+		//Relatividade:
+		if(operacao_form == 2){
+		printf("\n------------------------------------------------------------------------\n\n");
+		printf("E = m*c*2.\n");
+		}
+		//Área do quadrado/retângulo:
+		if(operacao_form == 3){
+		printf("\n------------------------------------------------------------------------\n\n");
+		printf("Área = Base * Altura.\n");
+		}
+		//Circunferência:
+		if(operacao_form == 4){
+		printf("\n------------------------------------------------------------------------\n\n");
+		printf("C = 2*pi*r.\n");
+		}
+		//Triângulo:
+		if(operacao_form == 5){
+		printf("\n------------------------------------------------------------------------\n\n");
+		printf("A = base*altura/2.\n");
+		}
 //Finalizações:
+printf("\n------------------------------------------------------------------------\n\n");
 printf("\n\n|***Obrigada pela visita e feche a aplicação.<3***|\n\n");
 system("Pause");
 return 0;
