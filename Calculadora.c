@@ -11,7 +11,7 @@ setlocale(LC_ALL,"Portuguese");
 int operacao_menu, operacao_basic, operacao_fg, operacao_form, operacao_extra, somar_1, somar_2, somar_r, subtrair_1, subtrair_2, subtrair_r, multiplicar_1, multiplicar_2, multiplicar_r, raiz_1, raiz_r, potencia_1, potencia_2, potencia_r, bhaskara_a, bhaskara_b, bhaskara_c, bhaskara_delta, bhaskara_r1, bhaskara_r2, quadrado_1, quadrado_2, quadrado_r, triangulo_base, triangulo_altura, triangulo_r; 
 float porcen_1, porcen_2, porcen_r, circulo_1, circulo_r, dividir_1, dividir_2, dividir_r;
 //Interação:
-printf("\n[Calculadora (Beta V3.5)]\n\n");
+printf("\n[Calculadora (V3.5)]\n\n");
 printf("Selecione a operação teclando o número correspondente e pressionando 'Enter':\n\n1.Operações básicas.\n2.Raiz Quadrada.\n3.Potência.\n4.Fórmula de Bháskara.\n5.Porcentagem.\n6.Figuras geométricas.\n0.Fórmulas matemáticas.\n\n");
 scanf("%i", &operacao_menu);
 printf("\n------------------------------------------------------------------------\n\n");
@@ -138,7 +138,7 @@ printf("\n----------------------------------------------------------------------
 		}
 	//Fórmulas matemáticas:
 		if(operacao_menu == 0){
-		printf("\nDigite o número correspondente a cada formula e pressione a tecla 'Enter':\n1.Fórmula de Bháskara.\n2.Relatividade.\n3.Área do quadrado/retângulo.\n4.Circunferência.\n5.Área do Triângulo.\n6.Extras.");
+		printf("\nDigite o número correspondente a cada formula e pressione a tecla 'Enter':\n1.Fórmula de Bháskara.\n2.Relatividade.\n3.Área do quadrado/retângulo.\n4.Circunferência.\n5.Área do Triângulo.\n6.Extras.\n\n");
 		scanf("%i", &operacao_form);
 		printf("\n------------------------------------------------------------------------\n\n");
 		}
