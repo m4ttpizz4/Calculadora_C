@@ -12,6 +12,7 @@ int operacao_menu, operacao_basic, operacao_fg, operacao_form, operacao_extra, s
 float porcen_1, porcen_2, porcen_r, circulo_1, circulo_r, dividir_1, dividir_2, dividir_r;
 //Interação:
 printf("\n[Calculadora (V3.5)]\n\n");
+printf("[Desenvolvido por: Matt]\n[Github: M4ttPizz4]\n\n");
 printf("Selecione a operação teclando o número correspondente e pressionando 'Enter':\n\n1.Operações básicas.\n2.Raiz Quadrada.\n3.Potência.\n4.Fórmula de Bháskara.\n5.Porcentagem.\n6.Figuras geométricas.\n0.Fórmulas matemáticas.\n\n");
 scanf("%i", &operacao_menu);
 printf("\n------------------------------------------------------------------------\n\n");
